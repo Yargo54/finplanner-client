@@ -23,12 +23,12 @@ function MainPage() {
                     <div className="site-layout-content"></div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    <div className='github-logo'> hggggggggggggggggg
+                    <div className='github-logo'> 
                     </div> 
                     <a href='https://github.com/AleksandrAVK' className="footer-link" />  <a href='https://github.com/Yargo54' />
 
                     </Footer>
-            </Layout>,
+            </Layout>
         </div>
     )
 }

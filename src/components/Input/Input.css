@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.p-input-style{
+    margin-bottom: 0;
+    width: 91px;
+    height: 21px;
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 21px;
+    color: #E5E5E5;
+}
+
+.div-input-style{
+    margin: 0 auto;
+    margin-top: 13px;
+    width: 311px;
+}
+
+.input-style{
+    border-radius: 5px;
+    background-color: #3EDBF0;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    width: 311px;
+    height: 40px;
+}
