@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-
+import './MainPages.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
 
 const { Header, Content, Footer } = Layout;
