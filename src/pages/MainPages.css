@@ -1,0 +1,59 @@
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: #fff;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+.ant-layout-header {
+  height: 64px;
+  padding: 0 50px;
+  color: rgb(233 40 107 / 85%);
+  line-height: 64px;
+  background: #b0ceeb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 50px 10px 10px;
+  /* background-color: cornflowerblue; */
+}
+.header__button {
+  height: 100%;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-layout-content {
+  background-image: url("./image/weekly-planer.jpg");
+  min-height: 280px;
+  padding: 24px;
+  height: 85vh;
+  background-size: cover;
+}
+
+.github-logo {
+  background-image: url("./image/scale_1200.png");
+  background: red;
+  width: 77px;
+  height: 77px;
+}
+
+.footer-link {
+  width: 77px;
+  height: 77px;
+}
