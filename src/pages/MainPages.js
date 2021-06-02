@@ -1,36 +1,31 @@
 import React from 'react';
 import { Button } from 'antd';
 import './MainPages.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
-
-const { Header, Content, Footer } = Layout;
+import { Layout } from 'antd';
+const { Content, Footer } = Layout;
 
 function MainPage() {
 
     return (
         <div>
-            <Layout className="layout">
-                <Header>
-                    <div className="logo">LOGO</div>
-                    <div className="header__button">   
+            <div className="header-wrapper">
+                <header className="header">
+                    <div className="header__button">
                         <Button type="primary">Зарегистрироваться</Button>
-                    <Button type="primary">Войти</Button>
+                        <Button type="primary">Войти</Button>
                     </div>
-                 
-                </Header>
-                <Content className="content" style={{ padding: '0 50px' }}>
+                </header>
+            </div>
 
-                    <div className="site-layout-content"></div>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    <div className='github-logo'> 
-                    </div> 
-                    <a href='https://github.com/AleksandrAVK' className="footer-link" />  <a href='https://github.com/Yargo54' />
+            <Content className="content" style={{ padding: '0 50px' }}>
 
-                    </Footer>
-            </Layout>
+                <div className="site-layout-content"></div>
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>
+                <p>Contacts</p>
+                <a href='https://github.com/AleksandrAVK' className="footer-link">link №1;</a>  <a href='https://github.com/Yargo54'>link №2</a>
+            </Footer>
         </div>
     )
 }
 export default MainPage
-{/* <a href="sample.html"><img src="images/sample.gif" width="50"  */}
