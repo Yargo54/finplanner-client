@@ -2,7 +2,7 @@
 
 .p-input-style{
     margin-bottom: 0;
-    width: 91px;
+    width: 100px;
     height: 21px;
     font-family: "Roboto";
     font-size: 18px;
@@ -12,8 +12,8 @@
 
 .div-input-style{
     margin: 0 auto;
-    margin-top: 13px;
     width: 311px;
+    margin-top: 13px;
 }
 
 .input-style{
@@ -24,4 +24,26 @@
     padding-left: 10px;
     width: 311px;
     height: 40px;
+}
+
+.p-register{
+    width: 381px;
+    height: 28px;
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 14px;
+    color: #E5E5E5;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.p-log{
+    width: 309px;
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 14px;
+    color: #E5E5E5;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    text-align: end;
 }

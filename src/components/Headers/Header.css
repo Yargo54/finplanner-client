@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.div-header{
+    width: 806px;
+    display: flex;
+}
+
+.div-content{
+
+}
+
+.img-in-header{
+    width: 179px;
+    height: 104px;
+}
+
+.h1-header{
+
+}
+
+.p-info-header{
+
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.div-consent{
+    margin: 0 auto;
+    margin-top: 37px;
+    width: 311px;
+    display: flex;
+}
+
+.p-consent{
+    font-family: "Roboto";
+    width: 254px;
+    height: 42px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #E5E5E5;
+    margin-bottom: 0px;
+    margin-right: 25px;
+}
+
+.input-checkbox{
+    width: 29px;
+    height: 29px;
+    border-radius: 5px;
+    position: relative;
+    top: 5px;
+}
+
+.div-registration{
+    margin: 0 auto;
+    width: 474px;
+    background-color: #04009A;
+}
+
+.content-registration{
+    padding-left: 51px;
+    padding-right: 51px;
+    padding-top: 35px;
+}
+
+.h2-registration{
+    margin: 0 auto;
+    width: 366px;
+    height: 28px;
+    font-family: "Roboto";
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #B8B5FF;
+    margin-bottom: 45px;
+}

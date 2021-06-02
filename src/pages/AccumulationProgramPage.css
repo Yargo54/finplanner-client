@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.main-div{
+    margin: 0 auto;
+    width: 899px;
+    height: 1168px;
+    background: #3EDBF0;
+}
