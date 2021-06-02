@@ -27,7 +27,7 @@
 .header-wrapper {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 50px 0px;
+  padding: 10px 50px 10px 10px;
   /* background-color: cornflowerblue; */
 }
 .header__button {
