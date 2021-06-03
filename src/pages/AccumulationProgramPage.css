@@ -3,6 +3,10 @@
 .main-div{
     margin: 0 auto;
     width: 899px;
-    height: 1168px;
     background: #3EDBF0;
+}
+
+.ul-foundation, .ul-mandatory_spending{
+    padding-left: 20px;
+    padding-top: 10px;
 }
