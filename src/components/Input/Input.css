@@ -2,7 +2,7 @@
 
 .p-input-style{
     margin-bottom: 0;
-    width: 91px;
+    width: 100px;
     height: 21px;
     font-family: "Roboto";
     font-size: 18px;
@@ -12,8 +12,8 @@
 
 .div-input-style{
     margin: 0 auto;
-    margin-top: 13px;
     width: 311px;
+    margin-top: 13px;
 }
 
 .input-style{
@@ -24,4 +24,71 @@
     padding-left: 10px;
     width: 311px;
     height: 40px;
+}
+
+.p-register{
+    width: 381px;
+    height: 28px;
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 14px;
+    color: #E5E5E5;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.p-log{
+    width: 309px;
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 14px;
+    color: #E5E5E5;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    text-align: end;
+}
+
+.accumulation{
+    width: 482px;
+    height: 68px;
+    background: #E4FBFF;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #7868E6;
+}
+
+.accumulation-p{
+    width: 442px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #7868E6;
+    margin: 0;
+}
+
+.p-accumulation-content{
+    width: 250px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFF5AB;
+}
+
+.div-input-accumulation-style{
+    width: 311px;
+    margin-top: -6px;
+    margin-left: 95px;
+    padding-bottom: 15px;
 }
