@@ -47,3 +47,48 @@
     margin-bottom: 0px;
     text-align: end;
 }
+
+.accumulation{
+    width: 482px;
+    height: 68px;
+    background: #E4FBFF;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #7868E6;
+}
+
+.accumulation-p{
+    width: 442px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #7868E6;
+    margin: 0;
+}
+
+.p-accumulation-content{
+    width: 250px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFF5AB;
+}
+
+.div-input-accumulation-style{
+    width: 311px;
+    margin-top: -6px;
+    margin-left: 95px;
+    padding-bottom: 15px;
+}
