@@ -6,7 +6,7 @@
     background: #3EDBF0;
 }
 
-.ul-foundation, .ul-mandatory_spending{
+.ul-foundation, .ul-mandatory_spending, .ul-optionalSpending, .ul-popularOptionalSpending{
     padding-left: 20px;
     padding-top: 10px;
 }

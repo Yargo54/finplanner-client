@@ -18,7 +18,25 @@ class App extends Component {
           <Route path="/registration" exact component={RegistrationPage} />
           <Route path="/login" exact component={LogPage} />
           <Route path="/forgotpassword" exact component={ForgotPasswordPade} />
-          <Route path="/accumulationprogram" exact component={AccumulationProgramPage} />
+          <Route path="/accumulationprogramconvert">
+            <AccumulationProgramPage name="Четыре конверта"/>
+          </Route>
+          <Route path="/accumulationprogramjug">
+            <AccumulationProgramPage name="Шесть кувшинов"/>
+          </Route>
+          <Route path="/accumulationprogramsafe">
+            <AccumulationProgramPage name="Сейф"/>
+          </Route>
+          <Route path="/accumulationprogramzeroing">
+            <AccumulationProgramPage name="Обнуление"/>
+          </Route>
+          <Route path="/accumulationprogramlatte">
+            <AccumulationProgramPage name="Эффект латте"/>
+          </Route>
+          <Route path="/accumulationprogrampopular">
+            <AccumulationProgramPage name="50/30/20"/>
+          </Route>
+          <Route path="/" exact component={MainPage} />
           <Route path="/choise" exact component={ChoiseProgram} />
           {/* <Route path="/schema/:id" exact component={SchemaPage} />
           <Route path="/schema/:id" exact component={SchemaPage} />
