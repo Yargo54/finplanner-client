@@ -6,8 +6,8 @@ export default function Input ( { name, text, content, classInputPContent, class
     if(content && classInputPContent === "p-register"){
         return (
             <div className="div-input-style">
-                <p className="p-input-style">{text}</p>
-                <input name={name}  type="text" className="input-style" />
+                <p className="p-input-style"></p>
+                <input name={name} placeholder="Введите ваш email" type="text" className="input-style" />
                 <p className="p-register">{content}</p>
             </div>
         )

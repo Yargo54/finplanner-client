@@ -1,6 +1,6 @@
 .container {
   width: 442px;
-  background: #b8b5ff;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +11,10 @@
 .main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #efefef;
 }
 
 .schema {
@@ -279,4 +283,10 @@
   text-align: center;
 
   color: #fff5ab;
+}
+
+.choise-program-bandle-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -16,11 +16,6 @@ export default function RegistrationPage() {
     let handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.target);
-
-        console.log(data.get('name'));
-        console.log(data.get('login'));
-        console.log(data.get('password'));
-
         let user = {
             name: data.get('name')
         }
@@ -55,13 +50,14 @@ export default function RegistrationPage() {
 
     
     return (
+        <div className="div-registration-wrapper">
         <div className="div-registration">
             <div className="content-registration">
                 <h2 className="h2-registration">Пожалуйста, зарегистрируйтесь</h2>
                 <form onSubmit={(event) => { handleSubmit(event) }}>
                     <Input name="name" text="Ваше имя*" />
                     <Input name="login" text="Логин*" />
-                    <Input name="password" text="Пароль*" content="Пароль должен состоять минимум из 10 символов и содержать хотя бы одну цифру, одну заглавную букву и один знак препинания" classInputPContent="p-register" />
+                    <Input name="password" text="Пароль*" content="Пароль содержит более 10 символов, более одной цифры,заглавной буквы и знака препинания" classInputPContent="p-register" />
                     <div className='div-consent'>
                         <p className="p-consent">Я даю согласие на обработку своих персональных данных*</p>
                         <input type="checkbox" className="input-checkbox" onChange={handleCheckboxChange} checked={isActive} />
@@ -69,6 +65,7 @@ export default function RegistrationPage() {
                     <Button isActive={!isActive} type="submit" text="Зарегистрироваться" classbutton="button-register" />
                 </form>
             </div>
+        </div>
         </div>
     )
 }
