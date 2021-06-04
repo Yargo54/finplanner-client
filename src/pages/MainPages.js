@@ -5,15 +5,26 @@ import { Layout } from 'antd';
 import { useHistory } from 'react-router';
 const { Content, Footer } = Layout;
 
-function MainPage() {
+export default function MainPage() {
+
+    let history = useHistory();
+
+    function goRegistration() {
+        history.push("/registration");
+    }
+    
+    function goLogin() {
+        history.push("/login");
+    }
+
 
     return (
         <div>
             <div className="header-wrapper">
                 <header className="header">
                     <div className="header__button">
-                        <Button type="primary">Зарегистрироваться</Button>
-                        <Button type="primary">Войти</Button>
+                        <Button onClick={goRegistration} type="primary">Зарегистрироваться</Button>
+                        <Button onClick={goLogin} type="primary">Войти</Button>
                     </div>
                 </header>
             </div>
@@ -29,4 +40,7 @@ function MainPage() {
         </div>
     )
 }
-export default MainPage
+
+
+
+
