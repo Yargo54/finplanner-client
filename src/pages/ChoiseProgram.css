@@ -17,7 +17,7 @@
   width: 370px;
   height: 28px;
   padding: 24px;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -42,7 +42,7 @@
   width: 298px;
   height: 28px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -54,9 +54,9 @@
 }
 .four-envelope_description {
   /* width: 188px; */
-  height: 68px;
+  height: 100px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -84,7 +84,7 @@
   width: 293px;
   height: 28px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -97,9 +97,9 @@
 .six-jag_description {
   display: flex;
   /* width: 188px; */
-  height: 68px;
+  height: 100px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -126,7 +126,7 @@
   width: 159px;
   height: 28px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -139,9 +139,9 @@
 .vault_description {
   display: flex;
   /* width: 188px; */
-  height: 68px;
+  height: 100px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -151,6 +151,7 @@
   align-items: stretch;
   margin-bottom: 31px;
   color: #fff5ab;
+  text-align: center
 }
 .null-img {
   display: flex;
@@ -168,7 +169,7 @@
   width: 225px;
   height: 28px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -182,9 +183,9 @@
   display: flex;
   margin-bottom: 8px;
   /* width: 188px; */
-  height: 68px;
+  height: 100px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -210,7 +211,7 @@
   width: 261px;
   height: 28px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -224,9 +225,9 @@
   display: flex;
   margin-bottom: 40px;
   /* width: 188px; */
-  height: 68px;
+  height: 75px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -254,7 +255,7 @@
   width: 200px;
   height: 28px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -269,7 +270,7 @@
   /* width: 188px; */
   height: 68px;
 
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
