@@ -4,7 +4,6 @@ import './MainPages.css';
 import { Layout } from 'antd';
 import { useHistory } from 'react-router';
 const { Content, Footer } = Layout;
-import { useHistory } from 'react-router-dom';
 
 export default function MainPage() {
 
