@@ -27,7 +27,7 @@
     font-weight: bold;
     font-size: 48px;
     line-height: 56px;
-    color: #04009A;
+    /* color: #04009A; */
     margin-bottom: 0px;
 }
 
@@ -38,6 +38,7 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
-    color: #7868E6;
-    margin-bottom: 70px;
+    /* color: #7868E6; */
+    margin-bottom: 0px;
+
 }

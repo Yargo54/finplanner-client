@@ -9,7 +9,7 @@ export default function LogPage() {
     let myHistory = useHistory();
     const [inputValue, setinputValue] = useState('');
     let data;
-   
+
     let handleSubmit = (event) => {
         event.preventDefault();
         data = new FormData(event.target);
@@ -37,14 +37,16 @@ export default function LogPage() {
     }
 
     return (
-        <div className="div-log">
-            <div className="div-log-content">
-                <h2 className="h2-login">Авторизируйтесь для входа</h2>
-                <form onSubmit={(event) => {handleSubmit(event)}}>
-                    <Input name="login" text="Ваш логин*" inputValue={data} />
-                    <Input inputValue={''} name="password" text="Пароль*" classInputPContent="p-log" content='Я забыл пароль'/>
-                    <Button type="submit" text="Войти" classbutton="button-log" />
-                </form>
+        <div className="login-wrapper">
+            <div className="div-log">
+                <div className="div-log-content">
+                    <h2 className="h2-login">Авторизируйтесь для входа</h2>
+                    <form onSubmit={(event) => { handleSubmit(event) }}>
+                        <Input name="login" text="Ваш логин*" inputValue={data} />
+                        <Input inputValue={''} name="password" text="Пароль*" classInputPContent="p-log" content='Я забыл пароль' />
+                        <Button type="submit" text="Войти" classbutton="button-log" />
+                    </form>
+                </div>
             </div>
         </div>
     )
