@@ -36,12 +36,6 @@
   border-radius: 15px;
 }
 
-.content-registration {
-  padding-left: 51px;
-  padding-right: 51px;
-  padding-top: 35px;
-}
-
 .h2-registration {
   margin: 0 auto;
   width: 366px;
@@ -98,4 +92,11 @@
     color: #E5E5E5;
     margin-top: 4px;
     margin-bottom: 0px;
+}
+.content-registration {
+    padding-left: 51px;
+    padding-right: 51px;
+    padding-top: 35px;
+    height: 94vh;
+    overflow: hidden;
 }
