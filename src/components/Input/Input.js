@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Input.css"
 
-export default function Input ( { text, content, classInputPContent, classInput, countConvert, countOsnova, countCel, osnova} ) {
+export default function Input ( { text, content, classInputPContent, classInput, countConvert, countOsnova, countCel, osnova,newValue} ) {
 
 
     if(content && classInputPContent === "p-register"){
@@ -32,7 +32,7 @@ export default function Input ( { text, content, classInputPContent, classInput,
         return (
             <div className="div-input-accumulation-style">
                 <p className="accumulation-p">{text}</p>
-                <input type="text"  className="accumulation" />
+                <input  type="text" className="accumulation" />
                 <p className="p-accumulation-content">{content}</p>
             </div>
         )
@@ -40,7 +40,9 @@ export default function Input ( { text, content, classInputPContent, classInput,
         return (
             <div className="div-input-accumulation-style">
                 <p className="accumulation-p">{text}</p>
-                <input type="text"  className="accumulation" />
+    
+                <input value={newValue} type="text" className="accumulation" />
+              
             </div>
         )
     }

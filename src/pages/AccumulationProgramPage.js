@@ -17,32 +17,30 @@ export default function AccumulationProgramPage ( { name } ) {
     let [ latte, setLatte] = useState('');
     let [ popular, setPopular] = useState('');
     
-    useEffect(() => {
-        fetch("http://localhost:3000/accumulationnew")
-        
-        // fetch("http://localhost:3000/accumulation")
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            dataAccumulation = [...data];
-            dataAccumulation.forEach((element) => {
-                if(element.name === "Четыре конверта"){
-                    console.log(element);
-                    setConvert(element.long);
-                } else if(element.name === "Шесть кувшинов"){
-                    setJug(element.long);
-                } else if(element.name === "Сейф"){
-                    setSafe(element.long);
-                } else if(element.name === "Обнуление"){
-                    setZeroing(element.long);
-                } else if(element.name === "Эффект латте"){
-                    setLatte(element.long);
-                } else if(element.name === "50/30/20"){
-                    setPopular(element.long);
-                }
-            })
-        })
-    }, [])
+    // useEffect(() => {
+    //     fetch("http://localhost:3000/accumulationnew")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         dataAccumulation = [...data];
+    //         dataAccumulation.forEach((element) => {
+    //             if(element.name === "Четыре конверта"){
+    //                 console.log(element);
+    //                 setConvert(element.long);
+    //             } else if(element.name === "Шесть кувшинов"){
+    //                 setJug(element.long);
+    //             } else if(element.name === "Сейф"){
+    //                 setSafe(element.long);
+    //             } else if(element.name === "Обнуление"){
+    //                 setZeroing(element.long);
+    //             } else if(element.name === "Эффект латте"){
+    //                 setLatte(element.long);
+    //             } else if(element.name === "50/30/20"){
+    //                 setPopular(element.long);
+    //             }
+    //         })
+    //     })
+    // }, [])
 
     
 
