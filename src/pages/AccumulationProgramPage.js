@@ -4,6 +4,7 @@ import "./AccumulationProgramPage.css";
 import Header from  "../components/Headers/Header.js";
 import AddAmount from "../components/AddAmount/AddAmount";
 import Input from "../components/Input/Input.js"
+import Nullschema from '../components/nullSchema'
 
 export default function AccumulationProgramPage ( { name } ) {
 
@@ -169,8 +170,9 @@ export default function AccumulationProgramPage ( { name } ) {
                 photo="https://downloader.disk.yandex.ru/preview/3db01e7ebb967737783f55ed18792f76315173bef9af2de970f08bb6febeeadb/60b8fac3/vNEp-TMQrOX7zzM7JLf1bCNsj3jxrBpg0s9DRSNJ0P716z1lRPzJvB2EIDqnZpWaL7Z_0TqYMWVAu-9cKlwwRQ%3D%3D?uid=0&filename=%D0%9E%D0%B1%D0%BD%D1%83%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
                 heading="Метод 'Обнуление'" 
                 info={zeroing}/>
-                <AddAmount amount="добавить сэкономленную сумму..."/>
-                <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p"/>
+                <Nullschema  />
+                {/* <AddAmount amount="добавить сэкономленную сумму..."/>
+                <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p"/> */}
             </div>
         )
     } else if(name === 'Эффект латте'){
