@@ -8,11 +8,20 @@ export default function Nullschema (){
     function inputSave(event) {
         console.log(event.target.value)
         inputValue = event.target.value;
+
     }
 
     function addAmount(event) {
-        console.log(event.target, input.value)
-        nullSchema = input.value;
+        console.log(inputValue);
+       fetch('http://localhost:3000/accumulationnew', {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify({value: +inputValue, name:"Обнуление", id:"60b60a5482afc30dacdbd63c"})
+
+        })
+            .then((inputValue) => { console.log(inputValue) });
         // Тянем с сервера схему расчета и Добавляем в поле Input text="Сбережения" расчитанные значения
     }
     return (
