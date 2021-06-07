@@ -98,45 +98,40 @@ function ChoiseProgram() {
                 <div className="choise-program-bandle-one">
                         <div className="container">
                     <button className="envelope-img" onClick={onClickConvert}></button>
-                    {/* <p className="four-envelope" >Метод "{convert}"</p> */}
-                    <p className="four-envelope" >Метод "Четыре конверта"</p>
+                    <p className="four-envelope" >Метод "{convert}"</p>
                     <p className="four-envelope_description">{convertDescription}</p>
                         </div>
                   
                     <div className="container">
                     <button className="jag-img" onClick={onClickJug}></button>
-                    <p className="six-jag">Метод "Шесть кувшинов"</p>
-                    {/* <p className="six-jag">Метод "{jug}"</p> */}
+                    <p className="six-jag">Метод "{jug}"</p>
                     <p className="six-jag_description">{jugDescription}</p>
                     </div>
                 </div>
                 <div className="choise-program-bandle-one">
                     <div className="container">
-                    <button className="vault-img" onClick={onClickZeroing}></button>
-                    <p className="vault">Метод "Сейф"</p>
-                    {/* <p className="vault">Метод "{safe}"</p> */}
+                    <button className="vault-img" onClick={onClickSafe}></button>
+                    <p className="vault">Метод "{safe}"</p>
                     <p className="vault_description">{safeDescription}</p>
 
                     </div>
                     <div className="container">
 
-                        <button onClick={onClickSafe} className="null-img"></button>
-                        <p className="null">Метод “Обнуление”</p>
-                        <p className="null_description">description</p>
+                        <button onClick={onClickZeroing} className="null-img"></button>
+                        <p className="null">Метод "{zeroing}"</p>
+                        <p className="null_description">{zeroingDescription}</p>
                     </div>
                 </div>
                 <div className="choise-program-bandle-one">
                     <div className="container">
                         <button className="latte-img" onClick={onClickLatte}></button>
-                        <p className="latte">Метод "Эффект латте"</p>
-                        {/* <p className="latte">Метод "{latte}"</p> */}
+                        <p className="latte">Метод "{latte}"</p>
                         <p className="latte_description">{latteDescription}</p>
                     </div>
                     <div className="container">
 
                         <button className="parts-img" onClick={onClickPopular}></button>
-                        <p className="parts">Метод "50/30/20"</p>
-                        {/* <p className="parts">Метод "{popular}"</p> */}
+                        <p className="parts">Метод "{popular}"</p>
                         <p className="parts_description">{popularDescription}</p>
                     </div>
 
