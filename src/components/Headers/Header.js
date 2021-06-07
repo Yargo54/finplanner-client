@@ -13,7 +13,7 @@ export default function Header ( { photo, heading, info } ) {
 
             </div>
             <p className="p-info-header">{info}</p>
-        </>
+        </div>
     )
 }
 
