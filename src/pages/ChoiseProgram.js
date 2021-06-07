@@ -112,7 +112,7 @@ function ChoiseProgram() {
                 </div>
                 <div className="choise-program-bandle-one">
                     <div className="container">
-                    <button className="vault-img" onClick={onClickSafe}></button>
+                    <button className="vault-img" onClick={onClickZeroing}></button>
                     <p className="vault">Метод "Сейф"</p>
                     {/* <p className="vault">Метод "{safe}"</p> */}
                     <p className="vault_description">{safeDescription}</p>
@@ -120,7 +120,7 @@ function ChoiseProgram() {
                     </div>
                     <div className="container">
 
-                        <button className="null-img"></button>
+                        <button onClick={onClickSafe} className="null-img"></button>
                         <p className="null">Метод “Обнуление”</p>
                         <p className="null_description">description</p>
                     </div>
