@@ -17,8 +17,6 @@ class App extends Component {
           <Route path="/" exact component={MainPage} />
           <Route path="/registration" exact component={RegistrationPage} />
           <Route path="/login" exact component={LogPage} />
-
-
           <Route path="/forgotpassword" exact component={ForgotPasswordPage} />
           <Route path="/accumulationprogramconvert">
             <AccumulationProgramPage name="Четыре конверта"/>

@@ -11,7 +11,6 @@ export default function Header ( { photo, heading, info } ) {
                 <h1 className="h1-header">{heading}</h1>
                 <p className="p-info-header">{info}</p>
             </div>
-            <p className="p-info-header">{info}</p>
         </div>
     )
 }
