@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 
-import AddAmount from "../components/AddAmount/AddAmount";
-import Input from "../components/Input/Input.js"
+import AddAmount from "./AddAmount/AddAmount";
+import Input from "./Input/Input.js"
 
 export default function Nullschema (){
     let inputValue;
-    const [newValue, setnewValue] = useState(0); 
+    const [newValue, setnewValue] = useState(); 
 
 
     function inputSave(event) {
-        console.log(event.target.value)
+        console.log("inputSave",event.target.value)
         inputValue = event.target.value;
 
     }
@@ -34,9 +34,10 @@ export default function Nullschema (){
 
     return (
         <div>
-            <AddAmount amount="добавить сэкономленную сумму..." inputSave={inputSave} newValue={newValue}/>
-            <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" addAmount={addAmount} />
+            <AddAmount amount="добавить сэкономленную сумму..." inputSave={inputSave} addAmount={addAmount} />
+            <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" newValue={newValue} />
         </div >
     )
 
 }
+

@@ -4,7 +4,9 @@ import "./AccumulationProgramPage.css";
 import Header from  "../components/Headers/Header.js";
 import AddAmount from "../components/AddAmount/AddAmount";
 import Input from "../components/Input/Input.js"
-import Nullschema from '../components/nullSchema'
+import Nullschema from '../components/Nullschema'
+import Latteschema from "../components/Latteschema";
+import Partsschema from "../components/Partsschema";
 
 export default function AccumulationProgramPage ( { name } ) {
 
@@ -180,8 +182,9 @@ export default function AccumulationProgramPage ( { name } ) {
                 photo="https://downloader.disk.yandex.ru/preview/7a3be58237fe0a001e1803ea0101bac8d465c569f531229755cab833ea4f79f4/60b8fc19/E0JvdB7DX_FPyJRussHBvSNsj3jxrBpg0s9DRSNJ0P5r9cMkS_R1_e59f3ILxiXN4xCP3WYTtA7W3TbLeu63Lg%3D%3D?uid=0&filename=%D0%9B%D0%B0%D1%82%D1%82%D0%B5.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
                 heading="Метод 'Эффект Латте'" 
                 info={latte}/>
-                <AddAmount amount="добавить сэкономленную сумму..."/>
-                <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p"/>
+                <Latteschema />
+                {/* <AddAmount amount="добавить сэкономленную сумму..."/>
+                <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p"/> */}
             </div>
         )
     } else if(name === '50/30/20'){
@@ -191,10 +194,11 @@ export default function AccumulationProgramPage ( { name } ) {
                 photo="https://downloader.disk.yandex.ru/preview/5d2c49cbd37c4e23737f0c3d47705f1f6ca78ecfed94cf34377c44bf919c5820/60b8fcb3/K_KXZdLFRJE0IlV8urkdMyNsj3jxrBpg0s9DRSNJ0P7DdgGhMUgNzX6x_to9q5DUPLtBPPnNWnQH_7aVIDQdbQ%3D%3D?uid=0&filename=50_30_20.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
                 heading="Метод '50/30/20'" 
                 info={popular}/>
-                <AddAmount amount="добавить денежное поступление..."/>
+                <Partsschema />
+                {/* <AddAmount amount="добавить денежное поступление..."/>
                 <Input text="На обязательные траты" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending}/>
                 <Input text="Расходы на жизнь" classInput="accumulation" classInputPContent="accumulation-p" content={popularOptionalSpending}/>
-                <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p"/>
+                <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p"/> */}
             </div>
         )
     }
