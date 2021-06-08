@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-
+import СhartForPartsschema from "./СhartForPartsschema"
 import AddAmount from "./AddAmount/AddAmount";
 import Input from "./Input/Input"
 
@@ -38,9 +38,9 @@ export default function Partsschema() {
         inputValue = event.target.value;
         setaccumulationValue(inputValue * 0.2)
         setTimeout(() => {
-            setbasicValue(inputValue * 0.5);
-            setdesiredValue(inputValue * 0.3);
-            setaccumulationValue(inputValue * 0.2)
+            setbasicValue((inputValue * 0.5).toFixed(2));
+            setdesiredValue((inputValue * 0.3).toFixed(2));
+            setaccumulationValue((inputValue * 0.2).toFixed(2))
         }, 400
         );
     }
@@ -58,9 +58,9 @@ export default function Partsschema() {
             .then((res) => res.json())
             .then((newValue) => {
                 console.log("newValue", newValue)
-                setbasicValue(newValue.basic);
-                setdesiredValue(newValue.desired)
-                setaccumulationValue(newValue.accumulation)
+                setbasicValue((newValue.basic).toFixed(2));
+                setdesiredValue((newValue.desired).toFixed(2))
+                setaccumulationValue((newValue.accumulation).toFixed(2))
 
              });        
     }
@@ -73,6 +73,8 @@ export default function Partsschema() {
             <Input text="На обязательные траты" classInput="accumulation" classInputPContent="accumulation-p" inputValue={basicValue} content={mandatorySpending} />
             <Input text="Расходы на жизнь" classInput="accumulation" classInputPContent="accumulation-p" inputValue={desiredValue} content={popularOptionalSpending} />
             <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" inputValue={accumulationValue} content={savings} />
+            <СhartForPartsschema basicValue={basicValue} desiredValue={desiredValue} accumulationValue={accumulationValue} />
+     
         </div>
     )
 
