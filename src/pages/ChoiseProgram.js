@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import './ChoiseProgram.css';
 
-
 function ChoiseProgram() {
 
     let dataAccumulation;

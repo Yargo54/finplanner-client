@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+
 import AddAmount from "../AddAmount/AddAmount.js";
 import Input from "../Input/Input.js";
 
+export default function FourConvertInput() {
 
-export default function FourConvertInput () {
+    let inputValue;
+
+    let [financialPurposes, setFinancialPurposes] = useState('');//финансовые цели
+    let [mandatorySpend, setMandatorySpending] = useState('');//на обязательные траты
+    let [convert, setConvert] = useState('');//запись суммы в конверт
 
     //Финансовые цели
     let foundation = 
@@ -22,38 +28,52 @@ export default function FourConvertInput () {
         <li>машина, бензин</li>
         <li>питание</li>
     </ul>
-
     
 
-    let [amounting, setAmounting] = useState('');//получение суммы
-    let [countAmount, setCount] = useState('');//запись суммы
-    
-    let [financialPurposes, setFinancialPurposes] = useState('');//финансовые цели
-    let [mandatorySpend, setMandatorySpending] = useState('');//на обязательные траты
-    let [convert, setConvert] = useState('');//запись суммы в конверт
-
-
-    function addAmountSave(event) {
-        setAmounting(event.target.value); 
+    function inputSave(event) {
+        console.log("inputSave", event.target.value)
+        inputValue = event.target.value;
+        setTimeout(() => {
+            setFinancialPurposes(countAmount * 0.1).toFixed(2);
+            setMandatorySpending(countAmount * 0.5).toFixed(2);
+            setConvert( (countAmount - (financialPurposes + mandatorySpend)) / 4 ).toFixed(2);
+        }, 400
+        );
     }
 
-    function Counting() {
-        setCount(amounting);
-        console.log(countAmount);
-        setFinancialPurposes(countAmount * 0.1)
-        setMandatorySpending(countAmount * 0.5);
-        setConvert( (countAmount - (financialPurposes + mandatorySpend)) / 4 )
+    function addAmount() {
+        fetch('http://localhost:3000/accumulationnew', {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify({ 
+                financialPurposes: +financialPurposes, 
+                mandatorySpend: +mandatorySpend, 
+                convert: +convert, 
+                name: "Четыре конверта", 
+                id: "60b6058182afc30dacdbd63a" 
+            })
+
+        })
+            .then((res) => res.json())
+            .then((newValue) => {
+                console.log("newValue", newValue)
+                setFinancialPurposes(newValue.financialPurposes);
+                setMandatorySpending(newValue.mandatorySpend);
+                setConvert(newValue.convert);
+             });        
     }
 
     return (
         <div>
-            <AddAmount amount="добавить денежное поступление..." addAmountSave={addAmountSave} Counting={Counting}/>
-            <Input text="На финансовые цели (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={foundation} value={financialPurposes}/>
-            <Input text="На обязательные траты (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} value={mandatorySpend}/>
-            <Input text="Конверт №1 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" value={convert}/>
-            <Input text="Конверт №2 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" value={convert}/>
-            <Input text="Конверт №3 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" value={convert}/>
-            <Input text="Конверт №4 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" value={convert}/>
+            <AddAmount amount="добавить денежное поступление..." inputSave={inputSave} addAmount={addAmount}/>
+            <Input text="На финансовые цели (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={foundation} inputValue={financialPurposes}/>
+            <Input text="На обязательные траты (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} inputValue={mandatorySpend}/>
+            <Input text="Конверт №1 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" inputValue={convert}/>
+            <Input text="Конверт №2 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" inputValue={convert}/>
+            <Input text="Конверт №3 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" inputValue={convert}/>
+            <Input text="Конверт №4 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" inputValue={convert}/>
         </div>
     )
 }
