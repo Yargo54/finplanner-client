@@ -129,5 +129,6 @@ return (
         <СhartForSixJag mandatorySpendin={newMandatorySpendin} saving={newSaving} optionalSpending={newOptionalSpending} selfDevelopment={newSelfDevelopment} spender={newSpender} presents={newPresents} content={"mandatorySpending"} />
     </div>
 )
+
 }
 
