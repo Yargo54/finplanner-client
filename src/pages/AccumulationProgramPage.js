@@ -83,7 +83,7 @@ export default function AccumulationProgramPage ( { name } ) {
         return (
             <div className="main-div">
                 <Header 
-                photo="https://downloader.disk.yandex.ru/preview/9e41c08d6c8b24817e5bcc30c02ce0c6d76a1064ee1853e6cdbd75320f058a3c/60b8f5b1/AsAOmGz__R_qDit6VpGb_kd7sZIlvo6dkPeuDONshee0OkQ8z5uOIZYdCaVc4g2_4wiLn6kyFG3J9E3yqAWJBw%3D%3D?uid=0&filename=%D0%A8%D0%B5%D1%81%D1%82%D1%8C%20%D0%BA%D1%83%D0%B2%D1%88%D0%B8%D0%BD%D0%BE%D0%B2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
+                photo="./image/Шесть_кувшинов.png"
                 heading="Метод 'Шесть кувшинов'" 
                 info={jug}/>
                 <SixJug />
@@ -93,7 +93,7 @@ export default function AccumulationProgramPage ( { name } ) {
         return (
             <div className="main-div">
                 <Header 
-                photo="https://downloader.disk.yandex.ru/preview/22e972a86f68cfbe7c8765e0ab327d1d46c99fc4b65435fd5dee7ddb7db2c00a/60b8f973/2oHRbJLOW-dSQSCFEhw95Ed7sZIlvo6dkPeuDONshefpqM94JMUpPxsOHFawHNDrAmQdYueyQgmMJgEZobj38Q%3D%3D?uid=0&filename=%D0%A1%D0%B5%D0%B9%D1%84.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
+                photo="./image/Сейф.png"
                 heading="Метод 'Сейф'" 
                 info={safe}/>
                 <SafeInput />
@@ -103,7 +103,7 @@ export default function AccumulationProgramPage ( { name } ) {
         return (
             <div className="main-div">
                 <Header 
-                photo="https://downloader.disk.yandex.ru/preview/3db01e7ebb967737783f55ed18792f76315173bef9af2de970f08bb6febeeadb/60b8fac3/vNEp-TMQrOX7zzM7JLf1bCNsj3jxrBpg0s9DRSNJ0P716z1lRPzJvB2EIDqnZpWaL7Z_0TqYMWVAu-9cKlwwRQ%3D%3D?uid=0&filename=%D0%9E%D0%B1%D0%BD%D1%83%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
+                photo="./image/Обнуление.png"
                 heading="Метод 'Обнуление'" 
                 info={zeroing}/>
                 <Nullschema  />
@@ -115,7 +115,7 @@ export default function AccumulationProgramPage ( { name } ) {
         return (
             <div className="main-div">
                 <Header 
-                photo="https://downloader.disk.yandex.ru/preview/7a3be58237fe0a001e1803ea0101bac8d465c569f531229755cab833ea4f79f4/60b8fc19/E0JvdB7DX_FPyJRussHBvSNsj3jxrBpg0s9DRSNJ0P5r9cMkS_R1_e59f3ILxiXN4xCP3WYTtA7W3TbLeu63Lg%3D%3D?uid=0&filename=%D0%9B%D0%B0%D1%82%D1%82%D0%B5.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
+                photo="./image/Латте.png"
                 heading="Метод 'Эффект Латте'" 
                 info={latte}/>
                 <Latteschema />
@@ -126,8 +126,8 @@ export default function AccumulationProgramPage ( { name } ) {
     } else if(name === '50/30/20'){
         return (
             <div className="main-div">
-                <Header 
-                photo="https://downloader.disk.yandex.ru/preview/5d2c49cbd37c4e23737f0c3d47705f1f6ca78ecfed94cf34377c44bf919c5820/60b8fcb3/K_KXZdLFRJE0IlV8urkdMyNsj3jxrBpg0s9DRSNJ0P7DdgGhMUgNzX6x_to9q5DUPLtBPPnNWnQH_7aVIDQdbQ%3D%3D?uid=0&filename=50_30_20.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1920x942"
+                <Header
+                photo="./image/50_30_20.png" 
                 heading="Метод '50/30/20'" 
                 info={popular}/>
                 <Partsschema />

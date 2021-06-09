@@ -36,7 +36,6 @@ class App extends Component {
           <Route path="/accumulationprogrampopular">
             <AccumulationProgramPage name="50/30/20"/>
           </Route>
-          <Route path="/" exact component={MainPage} />
 
           <Route path="/choise" exact component={ChoiseProgram} />
           {/* <Route path="/schema/:id" exact component={SchemaPage} />
