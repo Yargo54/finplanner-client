@@ -36,7 +36,6 @@ export default function Partsschema() {
     function inputSave(event) {
         console.log("inputSave", event.target.value)
         inputValue = event.target.value;
-        setaccumulationValue(inputValue * 0.2)
         setTimeout(() => {
             setbasicValue((inputValue * 0.5).toFixed(2));
             setdesiredValue((inputValue * 0.3).toFixed(2));

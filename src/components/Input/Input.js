@@ -8,7 +8,7 @@ export default function Input ( { text, content, classInputPContent, classInput,
         return (
             <div className="div-input-style">
                 <p className="p-input-style"></p>
-                <input name={name} placeholder="Введите ваш email" type="text" className="input-style" />
+                <input name={name} placeholder="Введите ваш пароль" type="text" className="input-style" />
                 <p className="p-register">{content}</p>
             </div>
         )
