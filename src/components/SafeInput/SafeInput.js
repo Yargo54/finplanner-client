@@ -1,16 +1,18 @@
 import React, {useState} from "react";
 
-import AddAmount from "./AddAmount/AddAmount";
-import Input from "./Input/Input.js"
+import AddAmount from "../AddAmount/AddAmount.js";
+import Input from "../Input/Input.js";
 
-export default function Latteschema (){
+export default function SafeInput (){
+
     let inputValue;
-    const [newValue, setnewValue] = useState(); 
 
+    let [saving, setSaving] = useState('')//сбережения
 
     function inputSave(event) {
         console.log("inputSave",event.target.value)
         inputValue = event.target.value;
+        setSaving(inputValue);
     }
 
     function addAmount() {
@@ -20,22 +22,24 @@ export default function Latteschema (){
             headers: {
                 "Content-type": "application/json",
             },
-            body: JSON.stringify( {value: +inputValue, name:"Эффект латте", id:"60b60b0b82afc30dacdbd63d"} )
-
+            body: JSON.stringify({
+                save: +saving, 
+                name:"Сейф", 
+                id:"60b6074482afc30dacdbd63b"
+            } )
         })
         .then((res)=> res.json())
         .then((newValue) => { console.log("newValue",newValue) 
-        setnewValue(newValue)
+        setSaving(newValue)
         });
         // Тянем с сервера схему расчета и Добавляем в поле Input text="Сбережения" расчитанные значения
     }
-    
 
-    return (
+    return(
         <div>
-            <AddAmount amount="добавить сэкономленную сумму..." inputSave={inputSave} addAmount={addAmount} />
-            <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" newValue={newValue} />
-        </div >
+            <AddAmount amount="добавить денежное поступление..." inputSave={inputSave} addAmount={addAmount}/>
+            <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" newValue={saving}/>
+        </div>
     )
 
 }

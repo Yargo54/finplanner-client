@@ -29,7 +29,6 @@ function ChoiseProgram() {
             .then(res => res.json())
             .then((data) => {
                 console.log(data)
-
                 dataAccumulation = [...data];
                 dataAccumulation.forEach(element => {
                     switch (element.name) {
@@ -92,19 +91,16 @@ function ChoiseProgram() {
         <div className="choise-program_wraper">
             <div className="main">
                 <p className="schema">Выберете схему накопления</p>
-
-
                 <div className="choise-program-bandle-one">
-                        <div className="container">
-                    <button className="envelope-img" onClick={onClickConvert}></button>
-                    <p className="four-envelope" >Метод "{convert}"</p>
-                    <p className="four-envelope_description">{convertDescription}</p>
-                        </div>
-                  
                     <div className="container">
-                    <button className="jag-img" onClick={onClickJug}></button>
-                    <p className="six-jag">Метод "{jug}"</p>
-                    <p className="six-jag_description">{jugDescription}</p>
+                        <button className="envelope-img" onClick={onClickConvert}></button>
+                        <p className="four-envelope">Метод "{convert}"</p>
+                        <p className="four-envelope_description">{convertDescription}</p>
+                    </div>
+                    <div className="container">
+                        <button className="jag-img" onClick={onClickJug}></button>
+                        <p className="six-jag">Метод "{jug}"</p>
+                        <p className="six-jag_description">{jugDescription}</p>
                     </div>
                 </div>
                 <div className="choise-program-bandle-one">

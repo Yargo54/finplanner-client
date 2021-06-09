@@ -25,7 +25,8 @@
 
 .ul-foundation, .ul-mandatory_spending, .ul-optionalSpending, .ul-popularOptionalSpending{
     padding-left: 20px;
-    padding-top: 10px;
+    margin-top: -20px;
+    margin-bottom: 45px;
 }
 .h1-header {
     width: 613px;
@@ -64,7 +65,7 @@
 }
 .accumulation {
     width: 482px;
-    height: 68px;
+    height: 40px;
     border-radius: 5px;
     padding-left: 10px;
     font-family: 'Roboto';
