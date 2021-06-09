@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Row, Col, Divider } from 'antd';
 
 import AddAmount from "../AddAmount/AddAmount.js";
 import Input from "../Input/Input.js"
@@ -12,6 +12,16 @@ export default function SixJug() {
     let [selfDevelopment, setSelfDevelopment] = useState('');//саморазвитие
     let [spender, setSpender] = useState('');//транжир
     let [presents, setPresents] = useState('');//подарки
+
+
+    let [newMandatorySpendin, setNewMandatorySpendin] = useState('');//финансовые цели
+    let [newSaving, setNewSaving] = useState('');//на обязательные траты
+    let [newOptionalSpending, setNewOptionalSpending] = useState('');//запись суммы в конверт
+    let [newSelfDevelopment, setNewSelfDevelopment] = useState('');//финансовые цели
+    let [newSpender, setNewSpender] = useState('');//на обязательные траты
+    let [newPresents, setNewPresents] = useState('');//запись суммы в конверт
+
+
 
     //Обязательные траты
     let mandatorySpending =
@@ -35,15 +45,16 @@ export default function SixJug() {
     function inputSave(event) {
         console.log("inputSave", event.target.value)
         setTimeout(() => {
-               setMandatorySpendin(event.target.value * 0.5);
+        setMandatorySpendin(event.target.value * 0.5);
         setSaving(event.target.value * 0.1);
         setOptionalSpending(event.target.value * 0.1);
         setSelfDevelopment(event.target.value * 0.1);
         setSpender(event.target.value * 0.1);
         setPresents(event.target.value * 0.05);
-        }, 400);
 
-   
+
+        }, 400);   
+
     }
 
 
@@ -70,25 +81,53 @@ export default function SixJug() {
             .then((res) => res.json())
             .then((newValue) => {
                 console.log("newValue", newValue)
-                setMandatorySpendin(newValue.main)
-                setSaving(newValue.accumulation)
-                setOptionalSpending(newValue.expensive_purchases)
-                setSelfDevelopment(newValue.self_development_and_hobbies)
-                setSpender(newValue.squander)
-                setPresents(newValue.presents)
+                setMandatorySpendin('')
+                setSaving('')
+                setOptionalSpending('')
+                setSelfDevelopment('')
+                setSpender('')
+                setPresents('')
+
+                setNewMandatorySpendin(newValue.main)
+                setNewSaving(newValue.accumulation)
+                setNewOptionalSpending(newValue.expensive_purchases)
+                setNewSelfDevelopment(newValue.self_development_and_hobbies)
+                setNewSpender(newValue.squander)
+                setNewPresents(newValue.presents)
+
+
             });
     }
 
-    return (
-        <div>
-            <AddAmount amount="добавить денежное поступление..." type="six" inputSave={inputSave} addAmount={addAmount} />
+
+return (
+
+    <div>
+        <AddAmount amount="добавить денежное поступление..." type="six" inputSave={inputSave} addAmount={addAmount} />
+        <Row>
+            <Col flex="1 1 200px">
+            <div>
             <Input text="На обязательные траты" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} inputValue={mandatorySpendin} />
             <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" inputValue={saving} content={"mandatorySpending"} />
             <Input text="Дорогие, но не обязательные покупки" classInput="accumulation" classInputPContent="accumulation-p" content={popularOptionalSpending} inputValue={optionalSpending} />
             <Input text="Обучение, саморазвитие, хобби" classInput="accumulation" classInputPContent="accumulation-p" inputValue={selfDevelopment} content={"mandatorySpending"} />
             <Input text="Транжирство" classInput="accumulation" classInputPContent="accumulation-p" inputValue={spender} content={"mandatorySpending"}/>
             <Input text="Подарки и благотворительность" classInput="accumulation" classInputPContent="accumulation-p" inputValue={presents} content={"mandatorySpending"} />
-            <СhartForSixJag mandatorySpendin={mandatorySpendin} saving={saving} optionalSpending={optionalSpending} selfDevelopment={selfDevelopment} spender={spender} presents={presents} content={"mandatorySpending"} />
         </div>
-    )
+            </Col>
+            <Col flex="0 1 300px">
+            <div>
+            <Input text="На обязательные траты" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} inputValue={newMandatorySpendin} />
+            <Input text="Сбережения" classInput="accumulation" classInputPContent="accumulation-p" inputValue={newSaving} content={"mandatorySpending"} />
+            <Input text="Дорогие, но не обязательные покупки" classInput="accumulation" classInputPContent="accumulation-p" content={popularOptionalSpending} inputValue={newOptionalSpending} />
+            <Input text="Обучение, саморазвитие, хобби" classInput="accumulation" classInputPContent="accumulation-p" inputValue={newSelfDevelopment} content={"mandatorySpending"} />
+            <Input text="Транжирство" classInput="accumulation" classInputPContent="accumulation-p" inputValue={newSpender} content={"mandatorySpending"}/>
+            <Input text="Подарки и благотворительность" classInput="accumulation" classInputPContent="accumulation-p" inputValue={newPresents} content={"mandatorySpending"} />
+        </div>
+       </Col>
+        </Row>
+        <СhartForSixJag mandatorySpendin={newMandatorySpendin} saving={newSaving} optionalSpending={newOptionalSpending} selfDevelopment={newSelfDevelopment} spender={newSpender} presents={newPresents} content={"mandatorySpending"} />
+    </div>
+)
 }
+

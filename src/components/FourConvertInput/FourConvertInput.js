@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Row, Col, Divider } from 'antd';
 
 import AddAmount from "../AddAmount/AddAmount.js";
 import Input from "../Input/Input.js";
@@ -12,6 +13,11 @@ export default function FourConvertInput() {
     let [financialPurposes, setFinancialPurposes] = useState('');//финансовые цели
     let [mandatorySpend, setMandatorySpending] = useState('');//на обязательные траты
     let [convert, setConvert] = useState('');//запись суммы в конверт
+
+    let [newFinancialPurposes, setnewFinancialPurposes] = useState('');//финансовые цели
+    let [newMandatorySpend, setnewMandatorySpend] = useState('');//на обязательные траты
+    let [newConvert, setnewConvert] = useState('');//запись суммы в конверт
+
 
     //Финансовые цели
     let foundation =
@@ -66,23 +72,45 @@ export default function FourConvertInput() {
             .then((res) => res.json())
             .then((newValue) => {
                 console.log("newValue", newValue)
-                setFinancialPurposes(newValue.financialPurposes);
-                setMandatorySpending(newValue.mandatorySpend);
-                setConvert(newValue.convert);
+                setFinancialPurposes('');
+                setMandatorySpending('');
+                setConvert('');
+                setnewFinancialPurposes(newValue.financialPurposes);
+                setnewMandatorySpend(newValue.mandatorySpend);
+                setnewConvert(newValue.convert);
             });
     }
 
-    return (
-        <div>
-            <AddAmount amount="добавить денежное поступление..." inputSave={inputSave} addAmount={addAmount} />
+
+return (
+
+    <div>
+        <AddAmount amount="добавить сэкономленную сумму..." inputSave={inputSave} newValue ={inputValue} addAmount={addAmount} />
+        <Row>
+            <Col flex="1 1 200px">
+            <div>
             <Input text="На финансовые цели (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={foundation} inputValue={financialPurposes} />
-            <p>{convert}</p>
             <Input text="На обязательные траты (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} inputValue={mandatorySpend} />
             <Input text="Конверт №1 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={convert} />
             <Input text="Конверт №2 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={convert} />
             <Input text="Конверт №3 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={convert} />
             <Input text="Конверт №4 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={convert} />
-            <СhartForFourConvert financialPurposes={financialPurposes} mandatorySpend={mandatorySpend} convert={convert} />
         </div>
-    )
+            </Col>
+            <Col flex="0 1 300px">
+            <div>
+            <Input text="На финансовые цели (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={foundation} inputValue={newFinancialPurposes} />
+            <Input text="На обязательные траты (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} inputValue={newMandatorySpend} />
+            <Input text="Конверт №1 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={newConvert} />
+            <Input text="Конверт №2 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={newConvert} />
+            <Input text="Конверт №3 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={newConvert} />
+            <Input text="Конверт №4 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={newConvert} />
+        </div>
+       </Col>
+        </Row>
+        <СhartForFourConvert financialPurposes={newFinancialPurposes} mandatorySpend={newMandatorySpend} convert={newConvert} />
+    </div>
+)
+
 }
+
