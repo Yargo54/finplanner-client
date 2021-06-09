@@ -25,14 +25,12 @@ export default function MainPage() {
             <div className="header-wrapper">
                 <header className="header">
                     <div className="header__button">
-                        <Button onClick={goRegistration} type="primary">Зарегистрироваться</Button>
-                        <Button onClick={goLogin} type="primary">Войти</Button>
+                        <Button onClick={goRegistration} type="primary" className="registration">Зарегистрироваться</Button>
+                        <Button onClick={goLogin} type="primary" className="in">Войти</Button>
                     </div>
                 </header>
             </div>
-
             <Content className="content" style={{ padding: '0 50px' }}>
-
                 <div className="site-layout-content">
                  <h1 className="type-text">Привет, это ФинПланер.</h1>
                  <h2 className="type-text center">Мы позаботимся о вашем финансовом</h2>
@@ -40,9 +38,11 @@ export default function MainPage() {
                     <TypingEffect />
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>
-                <p>Contacts</p>
-                <a href='https://github.com/AleksandrAVK' className="footer-link">link №1;</a>  <a href='https://github.com/Yargo54'>link №2</a>
+            <Footer style={{ textAlign: 'center' }} className="footer-style">
+                <p className="p-contacts">Contacts</p>
+                <a href='https://github.com/AleksandrAVK' className="footer-link">AleksandrAVK</a>  
+                <br />
+                <a href='https://github.com/Yargo54'>Yargo54</a>
             </Footer>
         </div>
     )

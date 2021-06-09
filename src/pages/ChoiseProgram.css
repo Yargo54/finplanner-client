@@ -1,11 +1,13 @@
 .container {
   width: 442px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 62px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 .choise-program_wraper {
   width: 100vw;
@@ -23,28 +25,20 @@
   background: #efefef;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .schema {
-
-    max-width: 783px;
-    height: 28px;
-    padding: 24px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 52px;
-    line-height: 28px;
-    text-align: center;
-    /* color: #e4fbff; */
-    margin-bottom: 72px;
-    margin-top: 15px;
-    line-height: 100%;
-
+  text-shadow: 0px 15px 5px rgba(0,0,0,0.1), 10px 20px 5px rgba(0,0,0,0.05), -10px 20px 5px rgba(0,0,0,0.05);
+  max-width: 783px;
+  height: 28px;
+  padding: 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 52px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 72px;
+  margin-top: 15px;
+  line-height: 100%;
 }
 .envelope-img {
   display: flex;
@@ -60,7 +54,6 @@
   display: flex;
   width: 298px;
   height: 28px;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
