@@ -4,17 +4,18 @@ import AddAmount from "./AddAmount/AddAmount";
 import Input from "./Input/Input.js"
 
 export default function Latteschema (){
-    let inputValue;
+
     const [newValue, setnewValue] = useState(); 
+    const [inputValue, setinputValue] = useState(); 
 
 
     function inputSave(event) {
-        console.log("inputSave",event.target.value)
-        inputValue = event.target.value;
+        console.log("inputSave 13",event.target.value)
+        setinputValue(event.target.value);
     }
 
     function addAmount() {
-        console.log('addAmount',inputValue);
+        console.log('Amount 18',inputValue);
         fetch('http://localhost:3000/accumulationnew', {
             method: "POST",
             headers: {

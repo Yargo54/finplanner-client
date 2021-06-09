@@ -24,10 +24,10 @@ export default function AccumulationProgramPage ( { name } ) {
         fetch("http://localhost:3000/accumulation")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             data.forEach((element) => {
                 if(element.name === "Четыре конверта"){
-                    console.log(element);
+                    // console.log(element);
                     setConvert(element.long);
                 } else if(element.name === "Шесть кувшинов"){
                     setJug(element.long);
