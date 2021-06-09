@@ -76,7 +76,6 @@ export default function FourConvertInput() {
         <div>
             <AddAmount amount="добавить денежное поступление..." inputSave={inputSave} addAmount={addAmount} />
             <Input text="На финансовые цели (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={foundation} inputValue={financialPurposes} />
-            <p>{convert}</p>
             <Input text="На обязательные траты (руб.)" classInput="accumulation" classInputPContent="accumulation-p" content={mandatorySpending} inputValue={mandatorySpend} />
             <Input text="Конверт №1 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={convert} />
             <Input text="Конверт №2 (руб.)" classInput="accumulation" classInputPContent="accumulation-p" newValue={convert} />
